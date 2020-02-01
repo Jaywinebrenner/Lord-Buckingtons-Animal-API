@@ -6,7 +6,7 @@ describe "post a animal route", :type => :request do
     post '/animals', params: { :name => 'Gary', :breed => 'Oyster', :legs => 1 }
   end
 
-  it 'returns the author name' do
+  it 'returns the animal name' do
     expect(JSON.parse(response.body)['name']).to eq('Gary')
   end
 

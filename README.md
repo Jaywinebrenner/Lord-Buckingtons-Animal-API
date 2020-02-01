@@ -29,6 +29,7 @@ A Ruby-Rails based API that allows users to make calls to Create, Read, Update a
 | GET /animals?name= | Allows user to search for animals by name |
 | GET /animals?breed= | Allows user to search for animal breeds available |
 | GET /randoms | Returns one random animal |
+| GET /api-docs | Return Swagger Documentation |
 ### Technologies Used
 
  - Ruby
