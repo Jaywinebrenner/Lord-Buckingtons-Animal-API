@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "post a animal route", :type => :request do
 
   before do
-    post '/animals', params: { :name => 'Gary', :breed => 'Oyster', :legs => '1' }
+    post '/animals', params: { :name => 'Gary', :breed => 'Oyster', :legs => 1 }
   end
 
   it 'returns the author name' do
@@ -15,10 +15,10 @@ describe "post a animal route", :type => :request do
   end
 
   it 'returns the animal leg count' do
-    expect(JSON.parse(response.body)['leg']).to eq('1')
+    expect(JSON.parse(response.body)['legs']).to eq(1)
   end
 
   it 'returns a created status' do
-    expect(response).to have_http_status(:created)
+    expect(response).to have_http_status(:success)
   end
 end

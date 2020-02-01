@@ -1,8 +1,8 @@
 class RandomsController < ApplicationController
 
   def index
-    @shelters = Shelter.all
-    json_response(@shelters.sample)
+    @animals = Animal.all
+    json_response(@animals.sample)
   end
 
 end
